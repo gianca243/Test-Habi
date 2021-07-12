@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+mysql-connector-python = "*"
+cerberus = "*"
+requests = "==2.25.1"
+
+[dev-packages]
+pylint = "==2.8.3"
+pytest = "==6.2.4"
+pytest-cov = "==2.12.1"
+yapf = "*"
+pep8 = "*"
+
+[requires]
+python_version = "3.8"

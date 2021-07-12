@@ -1,0 +1,27 @@
+{
+  "name": "test-habi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "PYTHONPATH=. pytest -s --cov=src",
+    "invoke":"sls invoke local -f get_properties_with_filter --path src/mocks/get_properties_with_filter.json",
+    "deploy": "sls deploy --stage: dev --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gianca243/Test-Habi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gianca243/Test-Habi/issues"
+  },
+  "homepage": "https://github.com/gianca243/Test-Habi#readme",
+  "dependencies": {
+    "serverless-python-requirements": "^5.1.1"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0"
+  }
+}

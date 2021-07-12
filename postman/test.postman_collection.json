@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "3976d70f-26c5-4ed1-8e5d-0c587af31f60",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://dsdhkjagu9.execute-api.us-east-2.amazonaws.com/dev/get_properties",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"year\": 2000,\n    \"city\": \"bogota\",\n    \"status\": \"pre_venta\" \n}"
+				},
+				"url": {
+					"raw": "https://dsdhkjagu9.execute-api.us-east-2.amazonaws.com/dev/get_properties",
+					"protocol": "https",
+					"host": [
+						"dsdhkjagu9",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"get_properties"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,4 +1,63 @@
 # Test-Habi
+Para poder invokar el servicio localmente primero se debe tener nodejs y pip3, con virtualenv:
+```
+pip3 install virtualenv
+```
+Adicionalmente se debe instalar pipenv
+Linux
+
+```bash
+pip install pipenv
+```
+
+MacOS
+
+```bash
+brew install pipenv
+```
+Seguido a este paso se debe crear el entorno virtual:
+```bash
+virtualenv venv
+```
+y activar:
+```bash
+source ./venv/bin/activate
+```
+se instalan las dependencias de node:
+```
+npm i
+```
+y por ultimo las dependencias necesarias para python
+```
+pipenv install --dev
+```
+## Invoke-local
+
+Se debe realizar un:
+
+```
+npm run invoke
+```
+## Unit-Test
+
+Se debe realizar un:
+
+```
+npm run test
+```
+
+## Uso del endpoint
+En postman se configura un request con el siguiente metodo y endpoint
+POST - https://dsdhkjagu9.execute-api.us-east-2.amazonaws.com/dev/get_properties
+Que tenga un body:
+```
+{
+    "year": 2000,
+    "city": "bogota",
+    "status": "pre_venta" 
+}
+```
+Se adjunta prueba al repositorio
 
 ## 1) Primer requerimiento
 Para realizar el primer requerimiento se esta planteando que exige:

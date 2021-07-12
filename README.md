@@ -53,7 +53,7 @@ Que tenga un body:
 ```
 {
     "year": 2000,
-    "city": "bogota",
+    "city": "bogota", 
     "status": "pre_venta" 
 }
 ```
@@ -98,3 +98,22 @@ En caso de que el cuerpo de la consulta sea el adecuado se utiliza la utilidad p
 ### Respuesta
 Se creo una utilidad que permita dar formato a la respuesta de la query ya que sql retorna una lista de tuplas, lo que significa que no hay un cabecero o nombre de columna, a la que asociar cada posición de la tupla entonces se crea una utilidad para crear un diccionario que permita desde el front entender mejor cual es la información que se esta recibiendo. Por ultimo se envia el resultado de la consulta con su respectivo status code, y se realiza un try en toda la función para que cualquier error al momento de programar se cachee y se pueda revisar o en caso de existir un error en el servidor de SQL se pueda ver el detalle.
 
+## 2) Segundo requerimiento
+El diagrama entidad relación esta dentro del directorio del proyecto
+```
+CREATE TABLE Likes (
+    id_user int NOT NULL,
+    id_property int NOT NULL,
+    id_history int NOT NULL,
+    PRIMARY KEY (id_user)
+);
+```
+Esta tabla se crea con el proposito de enlistar todos los likes, pero relacionando los usuarios autenticados con la propiedad a la que dieron like, y permite crear una relación a un historico de likes
+```
+CREATE TABLE likes_history (
+    id int NOT NULL,
+    date DATE NOT NULL,
+    value int NOT NULL
+);
+```
+likes_history se crea con el porposito de guardar el registro de varios likes con fecha y su respectivo valor en caso tal de que en un futuro se piense en un boton de dislike, o se opte por una lista de emociones tal como hace facebook o linkedin, por eso ese dato es numerico
